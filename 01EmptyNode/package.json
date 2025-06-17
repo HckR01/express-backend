@@ -1,0 +1,14 @@
+{
+  "name": "01emptynode",
+  "version": "1.0.0",
+  "description": "basic app to deploye",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "sk",
+  "license": "ISC"
+}
