@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>home</title>
+  <meta charset="UTF-8">
+  <title>Simple Form</title>
+  <link rel="stylesheet" href="/01EmptyNode/style.css">
 </head>
 <body>
-      <h1>home</h1>
-      <nav>
-            <ul>
-                  <li><a href="/home">home</a></li>
-                  <li><a href="/about">about</a></li>
-            </ul>
-      </nav>
-      
+  <div class="container">
+    <h1>Contact Form</h1>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="response"></p>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+
+      const res = await fetch("http://localhost:3000/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email }),
+      });
+
+      const data = await res.json();
+      document.getElementById("response").textContent = data.message;
+    });
+  </script>
 </body>
 </html>
