@@ -1,0 +1,22 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HckR01/express-backend.git"
+  },
+  "author": "saroj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HckR01/express-backend/issues"
+  },
+  "homepage": "https://github.com/HckR01/express-backend#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
