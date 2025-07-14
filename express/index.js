@@ -24,7 +24,7 @@ const port=8080;
 // });
 //...............................................................................................................
 //path parameter is the dynamic part of the url that is passed to the server use for dynamic data
-
+          ///:username/:id bhi le sak te hey andar asa parameter 
 // app.get("/:username", (req, res) => {
 //     res.send(`Hello, user: ${req.params.username}`);
 //     console.log(`Hello, user: ${req.params.username}`);
@@ -33,7 +33,10 @@ const port=8080;
 //.......................................................................................
 
 //urls and query strings handelings
-
+app.get("/search",(req,res)=>{
+     console.log(req.query);
+     res.send("no result found")
+})
 
 
 
