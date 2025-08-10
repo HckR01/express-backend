@@ -8,4 +8,13 @@ dotenv.config({
   path: "./env",
 });
 
-connectDB();
+connectDB() //connect db promisse return karega
+  .then(() => {
+    (app.listen(process.env.PORT || 8000),
+      () => {
+        console.log("server is running");
+      });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
