@@ -1,5 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 
+//data modeling
 const userSchema = new Schema(
   {
     username: {
